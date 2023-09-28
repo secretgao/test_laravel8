@@ -1,0 +1,386 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/projects": {
+            "get": {
+                "operationId": "e3dfa947954e394a726a0d4795bc03f2",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "对外服务"
+                ],
+                "summary": "用户登陆",
+                "description": "用户登陆",
+                "operationId": "UserController/login",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "name": "seven",
+                                "password": "123456"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "请求错误示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "422",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "请求成功示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "状态码",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "token": {
+                                                    "description": "token",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "对外服务"
+                ],
+                "summary": "用户注册",
+                "description": "用户注册",
+                "operationId": "UserController/register",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "name": "seven",
+                                "email": "seven@seven.com",
+                                "password": "123456"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "请求错误示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "422",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "请求成功示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "状态码",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_info": {
+            "get": {
+                "tags": [
+                    "对外服务"
+                ],
+                "summary": "用户信息",
+                "description": "用户信息",
+                "operationId": "UserController/getUserById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "id": "9"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "请求错误示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "422",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "请求成功示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "状态码",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "id": {
+                                                    "description": "Id",
+                                                    "type": "integer"
+                                                },
+                                                "name": {
+                                                    "description": "账号",
+                                                    "type": "string"
+                                                },
+                                                "email": {
+                                                    "description": "email",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_update": {
+            "put": {
+                "tags": [
+                    "对外服务"
+                ],
+                "summary": "更新用户邮箱",
+                "description": "更新用户邮箱",
+                "operationId": "UserController/UpdateUserEmailById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "id": "9",
+                                "email": "new@qq.com"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "请求错误示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "422",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "请求成功示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "状态码",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user_del": {
+            "delete": {
+                "tags": [
+                    "对外服务"
+                ],
+                "summary": "删除用户",
+                "description": "删除用户",
+                "operationId": "UserController/deleteUserById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "id": "9"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "请求错误示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "422",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "请求成功示例",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "code": {
+                                            "description": "状态码",
+                                            "type": "integer"
+                                        },
+                                        "msg": {
+                                            "description": "消息",
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
