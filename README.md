@@ -14,3 +14,4 @@ curl -s "https://laravel.build/example-app" | bash
 ```
 ## 访问接口文档
 * 本地host http://本地host/api/documentation#/
+![](https://github.com/secretgao/test_laravel8/blob/main/1695864399281.jpg)
