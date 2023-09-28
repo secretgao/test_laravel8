@@ -332,7 +332,7 @@ class UserController extends Controller
      * )
      */
     public function deleteUserById(Request $request){
-        
+
         $id = $request->get('id',0);
         if (empty($id)){
             return $this->error(422,[],'请传入参数id');
