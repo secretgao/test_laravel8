@@ -8,7 +8,7 @@ curl -s "https://laravel.build/example-app" | bash
 ```
 ./vendor/bin/sail up -d  
 ```
-## 生成接口文档
+## 生成接口文档 使用swagger生成可视化接口文档
 ```
 ./vendor/bin/sail   artisan l5-swagger:generate
 ```
@@ -18,7 +18,12 @@ curl -s "https://laravel.build/example-app" | bash
 
 
 ## 备份数据库
-* php artisan backup:run
+```
+./vendor/bin/sail  artisan backup:run
+```
 * 备份路径：/example-app/storage/app/Laravel/2023-09-28-07-26-39.zip
 ## 数据库还原
-* php artisan backup:restore --only-db
+```
+./vendor/bin/sail artisan backup:restore --only-db
+```
+
