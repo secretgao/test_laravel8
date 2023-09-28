@@ -15,3 +15,10 @@ curl -s "https://laravel.build/example-app" | bash
 ## 访问接口文档
 * 本地host http://本地host/api/documentation#/
 ![](https://github.com/secretgao/test_laravel8/blob/main/1695864399281.jpg)
+
+
+## 备份数据库
+* php artisan backup:run
+* 备份路径：/example-app/storage/app/Laravel/2023-09-28-07-26-39.zip
+## 数据库还原
+* php artisan backup:restore --only-db
